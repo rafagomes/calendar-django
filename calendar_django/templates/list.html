@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	<a href="/add">Add new item</a>
+	<ul>
+		{% for item in list_items %}
+			<li><a href="/item/{{ item.id }}">{{ item.date|date:'d/m/Y' }} - {{ item.title }}</a></li>
+		{% empty %}
+			<li>No items found</li>
+		{% endfor %}
+	</ul>
+{% endblock %}
