@@ -7,6 +7,7 @@ from django.conf.urls import patterns, include, url
 urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'calendar_django.views.home', name='home'),
+    url(r'^$', 'calendar_app.views.list'),
     # url(r'^calendar_django/', include('calendar_django.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
