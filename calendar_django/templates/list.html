@@ -1,10 +1,16 @@
 {% extends 'base.html' %}
 
 {% block content %}
-	<a href="/add">Add new item</a>
+	<ul>
+		<li><a href="/logout/">Logout</a></li>
+		<li><a href="/add">Add new item</a></li>
+	</ul>
 	<ul>
 		{% for item in list_items %}
-			<li><a href="/item/{{ item.id }}">{{ item.date|date:'d/m/Y' }} - {{ item.title }}</a></li>
+			<li>
+				<a href="/remove/{{ item.id }}/"><img src="{{ MEDIA_URL }}images/trash.png" width="16" height="16" alt=""></a>
+				<a href="/item/{{ item.id }}/">{{ item.date|date:'d/m/Y' }} - {{ item.title }}</a>
+			</li>
 		{% empty %}
 			<li>No items found</li>
 		{% endfor %}

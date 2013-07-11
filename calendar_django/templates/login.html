@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+	{% if form.errors %}
+		{{ form.non_field_errors }}
+	{% endif %}
+	<form action="" method="post">
+		{% 	csrf_token %}
+		{{ form.as_ul }}
+		<button type="submit">Add</button>
+	</form>
+{% endblock %}
