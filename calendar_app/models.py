@@ -1,7 +1,7 @@
 from django.db import models
 
 class CalendarItem(models.Model):
+	title = models.CharField(max_length = 100)
 	date = models.DateField()
 	hour = models.TimeField()
-	title = models.CharField(max_length = 100)
 	description = models.TextField()

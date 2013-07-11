@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'calendar_django.views.home', name='home'),
     url(r'^$', 'calendar_app.views.list'),
+    url(r'^add/$', 'calendar_app.views.add'),
+    url(r'^item/(?P<nr_item>\d+)/$', 'calendar_app.views.item'),
     # url(r'^calendar_django/', include('calendar_django.foo.urls')),
 
     # Uncomment the admin/doc line below to enable admin documentation:
